@@ -88,20 +88,23 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">ClothPPO: A Proximal Policy Optimization Enhancing Framework for Robotic Cloth Manipulation with Observation-Aligned Action Spaces.</h1>
+          <h1 class="title is-1 publication-title">ChatTracker: Enhancing Visual Tracking Performance via Chatting with Multimodal Large Language Model.</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://github.com/ElcarimQAQ">Libing Yang</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="http://ihpdep.github.io/">Yang Li</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://zjuchenlong.github.io/">Long Chen</a><sup>2</sup>
-            </span>
+            <span class="author-block">Yiming Sun<sup>*1,2</sup>,</span>
+            <span class="author-block">Fan Yu<sup>1</sup><sup>*</sup>,</span>
+            <span class="author-block">Shaoxiang Chen<sup>3</sup>,</span>
+            <span class="author-block">Yu Zhang<sup>1</sup>,</span>
+            <span class="author-block">Junwei Huang<sup>1</sup>,</span>
+            <span class="author-block"><strong>Yang Li<sup>1,4</sup></strong><sup>†</sup>,</span>
+            <span class="author-block">Chenhui Li<sup>1</sup>,</span>
+            <span class="author-block">Changbo Wang<sup>1</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>East China Normal University,</span>
-            <span class="author-block"><sup>2</sup>The Hong Kong University of Science and Technology</span>
+            <span class="author-block"><sup>1</sup>School of Computer Science and Technology, East China Normal University, Shanghai, China,</span>
+            <span class="author-block"><sup>2</sup>School of Computer Science, Fudan University, Shanghai, China,</span>
+            <span class="author-block"><sup>3</sup>Meituan Inc,</span>
+            <span class="author-block"><sup>4</sup>Shanghai Frontiers Science Center of Molecule Intelligent Syntheses, Shanghai, China</span>        
           </div>
           <div class="is-size-5 publication-authors"> 
             <span class="author-block">IJCAI 2024 Oral</span>
@@ -166,7 +169,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -182,10 +185,10 @@
     var video = document.getElementById('teaser');
     video.playbackRate = 2.5; // 设置视频播放速度为2倍
 </script>
-</section>
+</section> -->
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -241,7 +244,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -252,13 +255,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Vision-based robotic cloth unfolding has made great progress recently. However, prior works predominantly rely on value learning and have not fully explored policy-based techniques.
-            In this paper, we introduce ClothPPO, a framework that employs a policy gradient algorithm based on actor-critic architecture to enhance a pre-trained model with huge 10^6 action spaces aligned with observation in the task of unfolding clothes. 
-            To this end, we redefine the cloth manipulation problem as a partially observable Markov decision process.
-            Inspired by advances in reinforcement learning on the large language model, a supervised pre-training stage is employed to train a baseline model of our policy.
-            In the second stage, the modified Proximal Policy Optimization (PPO) is utilized to guide the supervised model within the proposed observation-aligned action space.
-            By optimizing and updating the strategy, our proposed method increases the garment's surface area for cloth unfolding under the soft-body manipulation task. 
-            The experiment shows that our proposed framework can successfully improve the unfolding performance of other methods.
+            Visual object tracking aims to locate a targeted object in a video sequence based on an initial bounding box. Recently, Vision-Language trackers have proposed to utilize additional natural language descriptions to enhance versatility in various applications. However, VL trackers are still inferior to State-of-The-Art (SoTA) visual trackers in terms of tracking performance. 
+            We found that this inferiority primarily results from their heavy reliance on manual textual annotations, which include the frequent provision of ambiguous language descriptions.
+            In this paper, we propose ChatTracker to leverage the wealth of world knowledge in the Multimodal Large Language Model (MLLM) to generate high-quality language descriptions and enhance tracking performance. To this end, we propose a novel reflection-based prompt optimization module to iteratively refine the ambiguous and inaccurate descriptions of the target with tracking feedback.
+            To further utilize semantic information produced by MLLM, a simple yet effective VL tracking framework is proposed and can be easily integrated as a plug-and-play module to boost the performance of both VL and visual trackers.
+            Experimental results show that our proposed ChatTracker achieves SoTA performance across multiple datasets and the generated language descriptions surpass manually annotated texts in terms of image-text alignment.
+            The source code and results will be released.
           </p>
           <!-- <p>
             Our approach augments neural radiance fields
@@ -635,19 +637,10 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{ijcai2024p762,
-      title     = {ClothPPO: A Proximal Policy Optimization Enhancing Framework for Robotic Cloth Manipulation with Observation-Aligned Action Spaces},
-      author    = {Yang, Libing and Li, Yang and Chen, Long},
-      booktitle = {Proceedings of the Thirty-Third International Joint Conference on
-                   Artificial Intelligence, {IJCAI-24}},
-      publisher = {International Joint Conferences on Artificial Intelligence Organization},
-      editor    = {Kate Larson},
-      pages     = {6895--6903},
-      year      = {2024},
-      month     = {8},
-      note      = {Main Track},
-      doi       = {10.24963/ijcai.2024/762},
-      url       = {https://doi.org/10.24963/ijcai.2024/762},
+    <pre><code>@inproceedings{chattracker,
+      title={ChatTracker: Enhancing Visual Tracking Performance via Chatting with Multimodal Large Language Model},
+      author={Sun, Yiming and Yu, Fan and Chen, Shaoxiang and Zhang, Yu and Huang, Junwei and Li, Yang and Li, Chenhui and Wang, Changbo},
+      booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems}
     }</code></pre>
   </div>
 </section>
